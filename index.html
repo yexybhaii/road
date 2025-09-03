@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RANGILO FUSION — BAD DEMO</title>
+  <style>
+    /* INTENTIONALLY BAD, LOUD, AND OUTDATED STYLES FOR BEFORE/AFTER REEL */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      cursor: crosshair; /* why not 🙃 */
+      font-family: "Comic Sans MS", Papyrus, cursive, fantasy;
+    }
+
+    /* Plain white background for reel */
+    body {
+      background: #ffffff;
+    }
+      100% { background-position: 200px 0, 0 200px; }
+    }
+
+    /* Random containers with inconsistent spacing */
+    .wrap {
+      max-width: 1200px; /* then break it anyway */
+      margin: 7px auto 0 17px; /* weird left margin */
+      border: 9px dotted #000;
+      background: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+      box-shadow: 0 0 25px 10px rgba(0,0,0,0.2) inset, 0 0 50px 0 rgba(255,0,200,0.6);
+    }
+
+    .header {
+      text-align: center;
+      padding: 4px 0 0 0;
+    }
+
+    .logo {
+      font-size: 64px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg,#ff0000,#ff9900,#ffee00,#33ff00,#00ccff,#6633ff,#ff33cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 4px 0 #000) drop-shadow(0 0 8px #fff);
+    }
+
+    .sub {
+      font-size: 22px;
+      color: #000;
+      text-shadow: 0 2px #ff0, 0 -2px #0ff;
+      margin-top: -6px;
+    }
+
+    .blink { animation: bl 0.6s steps(1, end) infinite; }
+    @keyframes bl { 50% { opacity: 0; } }
+
+    /* Using <marquee> for extra cringe */
+    marquee { font-weight: 900; font-size: 18px; color: #111; background: #fffb; padding: 4px 0; }
+
+    /* Terrible table layout with inline styles later */
+    .content {
+      padding: 6px 14px 30px 6px;
+    }
+
+    .cta-row { text-align:center; margin: 6px 0 18px; }
+
+    .btns {
+      display: flex; gap: 9px; justify-content: center; flex-wrap: wrap;
+    }
+
+    .btns a {
+      text-decoration: none;
+      padding: 14px 22px;
+      border: 4px outset #333;
+      background: linear-gradient(#fff, #ddd);
+      color: #000;
+      text-transform: uppercase;
+      font-weight: 900;
+      box-shadow: 0 0 0 6px #ff00aa, 0 6px 0 0 #000;
+      transform: rotate(-1.2deg);
+    }
+    .btns a:nth-child(2) {
+      border-radius: 22px 0 22px 0;
+      background: repeating-linear-gradient(45deg,#00ffe5 0 10px,#0066ff 10px 20px);
+      color: #fff;
+      text-shadow: 0 1px 0 #000;
+      transform: rotate(1.7deg) scale(1.04);
+    }
+    .btns a:nth-child(3) {
+      border-radius: 50px;
+      background: radial-gradient(circle,#ff0,#f80);
+      letter-spacing: 3px;
+    }
+
+    /* Misaligned fake gallery */
+    .gallery { display: grid; grid-template-columns: 2fr 1fr 1.3fr 0.7fr; gap: 4px; }
+    .ph {
+      background: linear-gradient(135deg, #999, #eee);
+      border: 6px ridge #000;
+      height: 160px;
+      image-rendering: pixelated; /* to look low-quality */
+      transform: skew(1.5deg) rotate(-0.6deg);
+    }
+    .ph.stretch { height: 240px; width: 100%; background: linear-gradient(45deg,#bbb,#ddd); filter: contrast(65%) saturate(180%); }
+
+    /* Footer mess */
+    footer {
+      margin-top: 18px;
+      padding: 10px 0 40px;
+      background: repeating-linear-gradient(90deg,#000 0 15px,#222 15px 30px);
+      color: #0f0;
+      text-align: center;
+      font-size: 14px;
+    }
+    footer a { color: #ff66ff; text-decoration: underline wavy; }
+
+    /* Mobile? Let's make it worse */
+    @media (max-width: 600px) {
+      .logo { font-size: 48px; letter-spacing: 10px; }
+      .gallery { grid-template-columns: 1fr 1fr; }
+      .btns a { transform: none; width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <marquee behavior="scroll" direction="left" scrollamount="10">🔥 WELCOME TO THE OFFICIAL *RANGILO FUSION* WEBSITE — SO COLORFUL IT HURTS 🔥</marquee>
+      <h1 class="logo blink">RANGILO FUSION</h1>
+      <p class="sub">"Where <span style="color:#ff0066">Too Many Colors</span> meet <span style="color:#00aaff">Too Little Taste</span>"</p>
+    </div>
+
+    <div class="content">
+      <!-- Horrible table-based layout -->
+      <table width="102%" border="5" cellpadding="12" cellspacing="8" style="background:#fff7; margin: 6px auto;">
+        <tr>
+          <td valign="top" width="33%">
+            <h3 style="background:#ff0; display:inline-block; padding:4px 8px; border:3px dashed #f00;">About Us!!</h3>
+            <p style="font-size:19px; line-height:1;">We are Rangilo Fusion and we do many colorful things that look very <i>cool</i> and <b>shiny</b>. Maybe food? Maybe dance? Maybe websites? Who knows! 🎉</p>
+            <ul style="list-style: square inside; font-size:18px;">
+              <li>Colors (lots)</li>
+              <li>Fonts (too many)</li>
+              <li>Buttons (so many shapes)</li>
+            </ul>
+          </td>
+          <td valign="top" width="34%">
+            <h3 style="background:#0ff; display:inline-block; padding:4px 8px; border:3px dotted #00f; transform: rotate(-1deg);">Latest News</h3>
+            <p><b class="blink">BREAKING:</b> We just added more colors to our colors. 🌈</p>
+            <p>Also, everything is centered because symmetry is optional.</p>
+          </td>
+          <td valign="top">
+            <h3 style="background:#f0f; display:inline-block; padding:4px 8px; border:3px solid #000;">Contact-ish</h3>
+            <p>Email: <a href="#">contact@rangilofusion.example</a></p>
+            <p>Phone: <span style="text-decoration: overline underline line-through wavy red;">0000-000-000</span></p>
+          </td>
+        </tr>
+      </table>
+
+      <div class="cta-row">
+        <div class="btns">
+          <a href="#">Book Now!!</a>
+          <a href="#">Click Here</a>
+          <a href="#">Don’t Click</a>
+        </div>
+      </div>
+
+      <div class="gallery" aria-label="low-quality-gallery">
+        <div class="ph"></div>
+        <div class="ph stretch"></div>
+        <div class="ph" style="background:linear-gradient(135deg,#ccc,#999);"></div>
+        <div class="ph" style="background:linear-gradient(135deg,#ddd,#bbb); height: 90px;"></div>
+      </div>
+
+      <marquee behavior="alternate" direction="right" scrollamount="7">✨ SO MUCH WOW • MUCH FUSION • VERY RANGILO ✨</marquee>
+    </div>
+
+    <footer>
+      © 2005–2025 RANGILO FUSION • All RGB reserved • <a href="#">Privacy? LOL</a>
+    </footer>
+  </div>
+</body>
+</html>
